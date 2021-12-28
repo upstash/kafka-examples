@@ -1,0 +1,15 @@
+name = "produce-in-cloudflare-workers"
+type = 'webpack'
+account_id = 'd7a1e259a76604ae354d6ed96722937c'
+route = ''
+zone_id = ''
+usage_model = ''
+workers_dev = true
+target_type = "webpack"
+
+[vars]
+UPSTASH_KAFKA_REST_URL = "https://grumpy-cats-14185-us1-rest-kafka.upstash.io"
+UPSTASH_KAFKA_REST_USERNAME = "ZnVsbC1tYW50aXMtMT9Jjzow03SnUtRQ"
+UPSTASH_KAFKA_REST_PASSWORD = "4-R-fmtoalXnoeu9TjFljqUrrq5_yAq4TPGd9c6JbqfQ=="
+TOPIC_NAME = "newtopic"
+
