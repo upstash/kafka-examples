@@ -11,7 +11,7 @@ async function handleRequest(request) {
     if (pathname.startsWith('/favicon')) {
         return fetch(request)
     }
-    const auth = Buffer.from(`${UPSTASH_KAFKA_REST_USERNAME}:${UPSTASH_KAFKA_REST_PASSWORD}`).toString('base64')
+    const auth = btoa(`${UPSTASH_KAFKA_REST_USERNAME}:${UPSTASH_KAFKA_REST_PASSWORD}`);
     const message = "hello";
     const init = {headers: {"Authorization": `Basic ${auth}`},}
 
