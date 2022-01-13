@@ -5,6 +5,7 @@ const auth = Buffer.from(`${user}:${pass}`).toString('base64')
 const topic = 'github-events'
 
 export default async function handler(req, res) {
+  console.log(req.query)
   let eventData = JSON.stringify(req.body);
   let x = await fetch(`${address}/produce/${topic}`, {
     method: 'POST',
