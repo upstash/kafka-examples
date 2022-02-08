@@ -19,7 +19,7 @@ async function handleRequest(request) {
     }
     const p = kafka.producer()
     const message = { hello: "world" } // Objects will get serialized using `JSON.stringify`
-    const response = await p.produce("blue", message)
+    const response = await p.produce("mytopic", message)
 
     return new Response(JSON.stringify(response))
 }
