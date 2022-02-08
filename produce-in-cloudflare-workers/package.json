@@ -9,9 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@upstash/kafka": "^1.2.1"
-  },
-  "browser": {
-    "@upstash/kafka": false
+    "@upstash/kafka": "^1.2.2-rc.2"
   }
 }
