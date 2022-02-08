@@ -8,8 +8,7 @@ workers_dev = true
 target_type = "webpack"
 
 [vars]
-UPSTASH_KAFKA_REST_URL = "https://grumpy-cats-14185-us1-rest-kafka.upstash.io"
-UPSTASH_KAFKA_REST_USERNAME = "ZnVsbC1tYW50aXMtMT9Jjzow03SnUtRQ"
-UPSTASH_KAFKA_REST_PASSWORD = "4-R-fmtoalXnoeu9TjFljqUrrq5_yAq4TPGd9c6JbqfQ=="
-TOPIC_NAME = "newtopic"
+UPSTASH_KAFKA_REST_URL = "https://definite-goldfish-14184-us1-rest-kafka.upstash.io"
+UPSTASH_KAFKA_REST_USERNAME = "repalce"
+UPSTASH_KAFKA_REST_PASSWORD = "replace-=="
 

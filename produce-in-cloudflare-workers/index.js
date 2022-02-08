@@ -1,3 +1,5 @@
+import { Kafka } from "@upstash/kafka"
+
 addEventListener("fetch", (event) => {
     event.respondWith(
         handleRequest(event.request).catch(
@@ -7,14 +9,20 @@ addEventListener("fetch", (event) => {
 });
 
 async function handleRequest(request) {
+
+    const kafka = new Kafka({
+        url: "UPSTASH_KAFKA_REST_URL",
+        username: "UPSTASH_KAFKA_REST_USERNAME",
+        password: "UPSTASH_KAFKA_REST_PASSWORD",
+    })
+
     const { pathname } = new URL(request.url)
     if (pathname.startsWith('/favicon')) {
         return fetch(request)
     }
-    const auth = btoa(`${UPSTASH_KAFKA_REST_USERNAME}:${UPSTASH_KAFKA_REST_PASSWORD}`);
-    const message = "hello";
-    const init = {headers: {"Authorization": `Basic ${auth}`},}
+    const p = kafka.producer()
+    const message = { hello: "world" } // Objects will get serialized using `JSON.stringify`
+    const response = await p.produce("mytopic", message)
 
-    resp = await fetch(`${UPSTASH_KAFKA_REST_URL}/produce/${TOPIC_NAME}/${message}`,init);
-    return resp
+    return response
 }
