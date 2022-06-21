@@ -5,7 +5,7 @@ import asyncio
 async def send_one():
     consumer = AIOKafkaConsumer(
         "test", # This is the topic id/name
-        bootstrap_servers='enhanced-kitten-9929-eu1-kafka.upstash.io:9092',
+        bootstrap_servers='<CONNECTION LINK>',
         ssl_context=create_ssl_context(),
         sasl_mechanism='SCRAM-SHA-256',
         security_protocol='SASL_SSL',
