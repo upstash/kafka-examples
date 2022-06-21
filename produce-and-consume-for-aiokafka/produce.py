@@ -8,8 +8,8 @@ async def send_one():
         ssl_context=create_ssl_context(),
         sasl_mechanism='SCRAM-SHA-256',
         security_protocol='SASL_SSL',
-        sasl_plain_username='<USERNAME AS STRING>',
-        sasl_plain_password='<PASSWORD AS STRING>'
+        sasl_plain_username='<USERNAME>',
+        sasl_plain_password='<PASSWORD>'
         )
     # Get cluster layout and initial topic/partition leadership information
     await producer.start()
